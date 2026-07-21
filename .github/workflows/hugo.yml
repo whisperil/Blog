@@ -4,11 +4,13 @@ on:
   push:
     branches: ["main"]
 
+# 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# 允许一个 concurrent 部署
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -20,13 +22,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: recursive  # 确保子模块（如主题 PaperMod）也被下载
 
       - name: Setup Hugo
-        uses: plugins/hugo@v1
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
-          extended: true
+          extended: true         # 启用 extended 版本（PaperMod 等主流主题必需）
 
       - name: Build with Hugo
         run: hugo --minify
