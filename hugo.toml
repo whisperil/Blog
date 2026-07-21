@@ -1,10 +1,48 @@
-baseURL = 'https://whisperil.github.io/Blog/'
+baseURL = 'https://whisperil.github.io/Blog/'  # 你的 GitHub Pages 地址
 languageCode = 'zh-cn'
-title = '我的个人博客'
-theme = 'PaperMod'
+title = 'Whisperil 的博客'
+theme = 'cleanwhite'                            # 指定主题名称
+
+# 分页设置：每页显示 5 篇文章
+paginate = 5
 
 [params]
-  defaultTheme = 'auto'
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowPostNavLinks = true
+  header_mapped_heading = true
+  title = "Whisperil's Blog"
+  subtitle = "记录技术、生活与思考"
+  meta_keywords = "Blog, Hugo, CleanWhite"
+  description = "Whisperil 的个人博客"
+
+  # 首页顶部大图（可替换为你喜欢的图片 URL）
+  header_image = "https://img.zhaohuabing.com/in-post/2018-05-24-docker-pattern-0.jpg"
+
+  # 侧边栏/作者信息
+  sidebar_about_description = " R&D Engineer / 记录思考与技术"
+  # avatar = "img/avatar.jpg" # 可以在 static/img/ 目录下放你的头像图片并取消注释
+
+  # 侧边栏卡片展示开关
+  sidebar_avatar = true
+  featured_tags = true          # 是否显示精选标签
+  featured_media = false        # 是否显示媒体
+
+  # 社交账号（不填留空或删掉即可）
+  github_username = "whisperil"
+
+  # 文章打赏功能（不需要设为 false 即可）
+  reward = false
+
+# 顶部导航栏菜单设置
+[[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "归档"
+    url = "/top/archive/"
+    weight = 2
+
+[[menu.main]]
+    name = "关于"
+    url = "/top/about/"
+    weight = 3

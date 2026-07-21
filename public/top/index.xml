@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Tops on Whisperil 的博客</title>
+		<link>http://localhost:1313/Blog/top/</link>
+		<description>Recent content in Tops on Whisperil 的博客</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 21 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/Blog/top/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>About</title>
+				<link>http://localhost:1313/Blog/top/about/</link>
+				<pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/Blog/top/about/</guid>
+				<description>&lt;h3 id=&#34;hello-world-&#34;&gt;Hello World 👋&lt;/h3&gt;&#xA;&lt;p&gt;欢迎来到我的博客！这里记录我的研究、技术探索与日常思考。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Archive</title>
+				<link>http://localhost:1313/Blog/top/archive/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/Blog/top/archive/</guid>
+				<description></description>
+			</item>
+	</channel>
+</rss>
