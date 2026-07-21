@@ -1,0 +1,10 @@
+baseURL = 'https://my-blog.vercel.app/'  # 之后发布时的网址，先随便填
+languageCode = 'zh-cn'
+title = '我的个人博客'
+theme = 'PaperMod'
+
+[params]
+  defaultTheme = 'auto'
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
