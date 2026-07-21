@@ -5,7 +5,7 @@
 		<link>http://localhost:1313/Blog/top/</link>
 		<description>Recent content in Tops on Whisperil 的博客</description>
 		<generator>Hugo</generator>
-		<language>zh-cn</language>
+		<language>en</language>
 		
 		
 		
@@ -18,7 +18,7 @@
 				<link>http://localhost:1313/Blog/top/about/</link>
 				<pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/Blog/top/about/</guid>
-				<description>&lt;h3 id=&#34;hello-world-&#34;&gt;Hello World 👋&lt;/h3&gt;&#xA;&lt;p&gt;欢迎来到我的博客！这里记录我的研究、技术探索与日常思考。&lt;/p&gt;</description>
+				<description>&lt;h3 id=&#34;hello-world-&#34;&gt;Hello World 👋&lt;/h3&gt;&#xA;&lt;p&gt;这里是我的个人介绍&amp;hellip;&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Archive</title>

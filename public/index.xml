@@ -5,7 +5,7 @@
 		<link>http://localhost:1313/Blog/</link>
 		<description>Recent content on Whisperil 的博客</description>
 		<generator>Hugo</generator>
-		<language>zh-cn</language>
+		<language>en</language>
 		
 		
 		
@@ -15,17 +15,17 @@
 			<atom:link href="http://localhost:1313/Blog/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>我的第一篇博客文章</title>
-				<link>http://localhost:1313/Blog/posts/first-post/</link>
+				<link>http://localhost:1313/Blog/post/first-post/</link>
 				<pubDate>Tue, 21 Jul 2026 16:20:00 +0800</pubDate>
-				<guid>http://localhost:1313/Blog/posts/first-post/</guid>
-				<description>&lt;p&gt;这里是我的第一篇博客内容！支持 &lt;strong&gt;Markdown&lt;/strong&gt; 语法。&lt;/p&gt;</description>
+				<guid>http://localhost:1313/Blog/post/first-post/</guid>
+				<description>&lt;p&gt;这里开始写你的 Markdown 文章正文内容&amp;hellip;&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>About</title>
 				<link>http://localhost:1313/Blog/top/about/</link>
 				<pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/Blog/top/about/</guid>
-				<description>&lt;h3 id=&#34;hello-world-&#34;&gt;Hello World 👋&lt;/h3&gt;&#xA;&lt;p&gt;欢迎来到我的博客！这里记录我的研究、技术探索与日常思考。&lt;/p&gt;</description>
+				<description>&lt;h3 id=&#34;hello-world-&#34;&gt;Hello World 👋&lt;/h3&gt;&#xA;&lt;p&gt;这里是我的个人介绍&amp;hellip;&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Archive</title>
