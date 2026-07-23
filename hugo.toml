@@ -17,6 +17,7 @@ paginate = 8
 # 1. 站点通用参数配置 (params)
 # ---------------------------------------------
 [params]
+  math = true
   header_mapped_heading = true
   title = "Whisperil Blog"
   subtitle = "记录思考、算法与技术"
