@@ -1,3 +1,10 @@
+---
+title: "利用Tailscale和Rustdesk进行远程桌面控制"
+date: 2026-07-23T16:00:00+08:00
+draft: false   <-- 必须是 false
+tags: ["Tailscale", "Rustdesk", "远程控制"]
+---
+
 利用Tailscale和Rustdesk进行远程桌面控制
 **核心技术：P2P 直连（打洞）**
 Tailscale 基于 WireGuard® 协议，它的核心强项是 **NAT 穿透（打洞）**。
