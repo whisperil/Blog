@@ -2,7 +2,11 @@
 title: "利用Tailscale和Rustdesk进行远程桌面控制"
 date: 2026-07-23T16:00:00+08:00
 draft: false   <-- 必须是 false
-tags: ["Tailscale", "Rustdesk", "远程控制"]
+tags: 
+    - "Tailscale"
+    - "Rustdesk" 
+    - "远程控制"
+description: "本文简要介绍利用Tailscale和Rustdesk进行远程桌面控制。"
 ---
 
 利用Tailscale和Rustdesk进行远程桌面控制

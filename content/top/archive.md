@@ -1,5 +1,6 @@
 ---
 title: "Archive"
-type: "archive"
-draft: false
+description: "文章归档"
+layout: "archive"
+active: "archive"
 ---

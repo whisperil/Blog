@@ -1,62 +1,115 @@
 baseURL = 'https://whisperil.github.io/Blog/'
-title = 'Whisperil 的博客'
+title = 'Arlen Diego Blog'
 theme = 'cleanwhite'
 
-# 最新 Hugo 语言配置
+# ---------------------------------------------
+# 1. 语言与分页设置
+# ---------------------------------------------
 [language]
   locale = 'zh-cn'
 
-# 分页：每页显示 8 篇文章
-paginate = 8
-
-# 允许在 Markdown 中嵌入 HTML 标签
-[markup.goldmark.renderer]
-  unsafe = true
+paginate = 8                   # 首页每页展示 8 篇文章
+preserveTaxonomyNames = true   # 保留标签/分类的大小写 (如 VCK, MPLC)
+hasCJKLanguage = true          # 开启中日韩支持，确保字数与阅读时间估算精准
 
 # ---------------------------------------------
-# 1. 站点通用参数配置 (params)
+# 2. Markdown 解析与 LaTeX 公式配置 (防转义)
+# ---------------------------------------------
+[markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 3
+  [markup.highlight]
+    style = "dracula"          # 代码高亮主题
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true            # 允许在 Markdown 中嵌套 HTML
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true          # 开启 LaTeX/矩阵 原样传递
+        delimiters = { block = [['$$', '$$'], ['\\[', '\\]']], inline = [['$', '$'], ['\\(', '\\)']] }
+
+[outputs]
+  home = ["HTML", "RSS", "Algolia"]
+
+[outputFormats.Algolia]
+  baseName = "algolia"
+  isPlainText = true
+  mediaType = "application/json"
+  notAlternative = true
+
+[params.algolia]
+  vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
+  params = ["categories", "tags"]
+
+# ---------------------------------------------
+# 3. 站点通用参数配置 (params)
 # ---------------------------------------------
 [params]
-  math = true
+  math = false                 # 禁用主题自带的远程 unpkg 下载
   header_mapped_heading = true
-  title = "Whisperil Blog"
+  title = "Arlen Diego Blog"
   subtitle = "记录思考、算法与技术"
-  meta_keywords = "Blog, Hugo, CleanWhite"
-  description = "Whisperil 的个人博客"
+  SEOTitle = "Arlen Diego 的博客 | 矢量空间光通信与算法探索"
+  meta_keywords = "Arlen Diego, 博客, 算法工程师, 光通信, VCK, MPLC, Python, Matlab"
+  description = "Arlen Diego 的个人博客，记录通信算法、空间光通信、软件开发与技术思考。"
 
-  # 首页顶部全宽大图
+  # 首页顶部背景图与侧边栏
   header_image = "img/my_bg.jpg"
-
-  # 侧边栏/作者信息设置
   sidebar_about_description = "通信算法工程师 / R&D staff"
-  sidebar_avatar = true
-  avatar = "img/avatar.jpg"
+  sidebar_avatar = "img/avatar.jpg"
 
-  # 侧边栏功能开关
+  # 侧边栏功能组件开关
   featured_tags = true
   featured_tags_weight = 1
-  featured_media = false
+  featured_condition_size = 0
+  friends = true
+  bookmarks = false
+  about_me = true
+  last_posts = true
   reward = false
 
+  # 404 页面
+  image_404 = "img/404-bg.jpg"
+  title_404 = "你来到了没有知识的荒原 :("
+
+  algolia_search = true
+  algolia_appId = "2FH2R11I39"
+  algolia_indexName = "blog"               # 对应你在 Algolia 创建的 Index 名称
+  algolia_apiKey = "c1a03b3ec4bb9423008ed7fb23d12062"
+
   # 社交账号图标
-  github_username = "whisperil"
+  [params.social]
+    rss = true
+    github = "https://github.com/whisperil"
+
+  # ---------------------------------------------
+  # Clean White 主题专用顶部导航菜单 (适配核心)
+  # ---------------------------------------------
+  [[params.additional_menus]]
+    title = "首页"
+    href = ""
+
+  [[params.additional_menus]]
+    title = "归档"
+    href = "top/archive/"
+
+  [[params.additional_menus]]
+    title = "关于"
+    href = "top/about/"
+
+  # ---------------------------------------------
+  # 友情链接列表
+  # ---------------------------------------------
+  [[params.friend_link]]
+    title = "Hugo 官方文档"
+    href = "https://gohugo.io/"
 
 # ---------------------------------------------
-# 2. 顶部导航菜单配置 (menu)
-# 注意：明确声明 [menu] 根节点，避免被 params 吞掉
+# 4. 媒体类型定义
 # ---------------------------------------------
-# 直接使用最扁平的菜单定义
-[[menu.main]]
-name = "首页"
-url = "/"
-weight = 1
-
-[[menu.main]]
-name = "归档"
-url = "/top/archive/"
-weight = 2
-
-[[menu.main]]
-name = "关于"
-url = "/top/about/"
-weight = 3
+[mediaTypes]
+  [mediaTypes.'font/woff']
+    suffixes = ['woff']
+  [mediaTypes.'font/woff2']
+    suffixes = ['woff2']

@@ -2,7 +2,12 @@
 title: "超构光学表面"
 date: 2026-07-23T16:00:00+08:00
 draft: false   <-- 必须是 false
-tags: ["Metasurface", "Pancharatnam-Berry相位", "传播相位", "BIC", "Fano"]
+tags: 
+    - "Metasurface" 
+    - "Pancharatnam-Berry相位"
+    - "传播相位"
+    - "BIC" 
+    - "Fano"
 description: "本文简要介绍超构表面的基本定义、工作原理及其在电磁波调控中的应用。"
 ---
 

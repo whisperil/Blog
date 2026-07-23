@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Rustdesk on Arlen Diego Blog</title>
+		<link>http://localhost:1313/Blog/tags/rustdesk/</link>
+		<description>Recent content in Rustdesk on Arlen Diego Blog</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 23 Jul 2026 16:00:00 +0800</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/Blog/tags/rustdesk/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>利用Tailscale和Rustdesk进行远程桌面控制</title>
+				<link>http://localhost:1313/Blog/post/tailscale&#43;rustdesk%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6/</link>
+				<pubDate>Thu, 23 Jul 2026 16:00:00 +0800</pubDate>
+				<guid>http://localhost:1313/Blog/post/tailscale&#43;rustdesk%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6/</guid>
+				<description>&lt;p&gt;利用Tailscale和Rustdesk进行远程桌面控制&#xA;&lt;strong&gt;核心技术：P2P 直连（打洞）&lt;/strong&gt;&#xA;Tailscale 基于 WireGuard® 协议，它的核心强项是 &lt;strong&gt;NAT 穿透（打洞）&lt;/strong&gt;。&lt;/p&gt;&#xA;&lt;h2 id=&#34;第一部分环境准备&#34;&gt;第一部分：环境准备&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-核心架构&#34;&gt;1. 核心架构&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;电脑 A (Ubuntu - 公司)&lt;/strong&gt;：作为 &lt;strong&gt;ID/中继服务器&lt;/strong&gt;，提供连接调度。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;电脑 B &amp;amp; C (Windows)&lt;/strong&gt;：作为 &lt;strong&gt;控制端/被控端&lt;/strong&gt;，通过虚拟网道互联。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-必备物料&#34;&gt;2. 必备物料&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Tailscale&lt;/strong&gt;: 用于构建跨地域的虚拟局域网。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;RustDesk Server&lt;/strong&gt;: 包含 &lt;code&gt;hbbs&lt;/code&gt; (ID服务) 和 &lt;code&gt;hbbr&lt;/code&gt; (中继服务)。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;RustDesk Client&lt;/strong&gt;: 在 Windows 和 Ubuntu 上安装的图形化控制软件。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;第二部分部署步骤&#34;&gt;第二部分：部署步骤&lt;/h2&gt;&#xA;&lt;h3 id=&#34;步骤-1搭建-tailscale-虚拟网道&#34;&gt;步骤 1：搭建 Tailscale 虚拟网道&lt;/h3&gt;&#xA;&lt;p&gt;在 &lt;strong&gt;所有电脑&lt;/strong&gt; (A, B, C) 上安装并登录同一个账号：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Ubuntu (A)&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;执行 &lt;code&gt;curl -fsSL https://tailscale.com/install.sh | sh&lt;/code&gt; 或使用静态包安装。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;执行 &lt;code&gt;sudo tailscale up&lt;/code&gt; 并完成浏览器授权。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Windows (B/C)&lt;/strong&gt;: 下载安装包登录。&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
